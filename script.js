@@ -14,21 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.body.style.overflow = '';
 	});
 
-	// Instagram popup
+	// Instagram popup (improved)
 	const instagramBubble = document.querySelector('.instagram-bubble');
 	const instagramModal = document.querySelector('.instagram-modal');
 	const modalClose = document.querySelector('.modal-close');
 	instagramBubble?.addEventListener('click', () => {
-		instagramModal.classList.add('active');
+		instagramModal.classList.add('active', 'improved-modal');
 		document.body.style.overflow = 'hidden';
 	});
 	modalClose?.addEventListener('click', () => {
-		instagramModal.classList.remove('active');
+		instagramModal.classList.remove('active', 'improved-modal');
 		document.body.style.overflow = '';
 	});
 	instagramModal?.addEventListener('click', (e) => {
 		if (e.target === instagramModal) {
-			instagramModal.classList.remove('active');
+			instagramModal.classList.remove('active', 'improved-modal');
+			document.body.style.overflow = '';
+		}
+	});
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && instagramModal.classList.contains('active')) {
+			instagramModal.classList.remove('active', 'improved-modal');
 			document.body.style.overflow = '';
 		}
 	});
