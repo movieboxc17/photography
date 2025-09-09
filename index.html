@@ -1,159 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Under Construction | PortalsBase</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/sites.css">
-  <style>
-    .construction-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      text-align: center;
-    }
-    .construction-title {
-      font-size: 2.3rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1.1rem;
-    }
-    .construction-desc {
-      font-size: 1.15rem;
-      color: var(--text);
-      margin-bottom: 1.7rem;
-    }
-    .construction-actions {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .construction-actions a {
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.07rem;
-      transition: background var(--transition), color var(--transition);
-      box-shadow: 0 2px 8px #7c4dff22;
-    }
-    .construction-actions a:hover {
-      background: var(--accent);
-      color: var(--primary);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional photography portfolio featuring nature, portrait, and urban photography by ThePhotographers based in Sweden.">
+    <meta name="keywords" content="photography, portfolio, Sweden, nature, portrait, urban, professional photography">
+    <title>Photography Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Photography Portfolio - ThePhotographers">
+    <meta property="og:description" content="Professional photography portfolio featuring stunning imagery from Sweden.">
+    <meta property="og:image" content="https://i.ibb.co/J2t8SXt/Elsk-p-01.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Photography Portfolio - ThePhotographers">
+    <meta property="twitter:description" content="Professional photography portfolio featuring stunning imagery from Sweden.">
+    <meta property="twitter:image" content="https://i.ibb.co/J2t8SXt/Elsk-p-01.jpg">
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.ibb.co">
+    <link rel="preconnect" href="https://api.qrserver.com">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <span class="logo">PortalsBase</span>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="sites.html">Sites</a>
-      <a href="apps.html">Apps</a>
-      <a href="settings.html">Settings</a>
-      <a href="bugs.html">Bugs</a>
-      <a href="more.html">More</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Elliot Winblad Photography</h1>
+            <h2>Capturing Moments</h2>
+            <p>by Elliot Winblad</p>
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+            <a href="#featured-work">Featured Work</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!-- Enhanced Mobile Navigation Toggle -->
+        <button class="nav-toggle" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="nav-mobile" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <button class="nav-close" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#featured-work">Featured Work</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <button class="darkmode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" tabindex="0" id="dm-toggle">
-      <svg id="dm-icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5"/>
-        <g stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="2" x2="12" y2="4"/>
-          <line x1="12" y1="20" x2="12" y2="22"/>
-          <line x1="2" y1="12" x2="4" y2="12"/>
-          <line x1="20" y1="12" x2="22" y2="12"/>
-        </g>
-      </svg>
+    <!-- Featured Work Section -->
+    <section id="featured-work" class="section featured-work">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="featured-item loading">
+            <img src="https://i.ibb.co/4gFYtKJ/IMG-0373.jpg" alt="Featured Sunset Photography" loading="lazy">
+            <p>Sunset</p>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="category-nav" role="tablist" aria-label="Photo categories">
+            <button class="category-btn active" data-category="all" role="tab" aria-selected="true" aria-label="Show all photos">
+                <i class="fas fa-th-large" aria-hidden="true"></i>
+                <span>All Photos</span>
+            </button>
+            <button class="category-btn" data-category="nature" role="tab" aria-selected="false" aria-label="Show nature photos">
+                <i class="fas fa-leaf" aria-hidden="true"></i>
+                <span>Nature</span>
+            </button>
+            <button class="category-btn" data-category="architecture" role="tab" aria-selected="false" aria-label="Show architecture photos">
+                <i class="fas fa-building" aria-hidden="true"></i>
+                <span>Architecture</span>
+            </button>
+            <button class="category-btn" data-category="urban" role="tab" aria-selected="false" aria-label="Show urban photos">
+                <i class="fas fa-city" aria-hidden="true"></i>
+                <span>Urban</span>
+            </button>
+        </div>
+        <div class="gallery-container">
+            <!-- Nature Photos -->
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/fSKdDt0/F-r-06.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/q7561nw/F-r-03.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/7g4WKxh/F-r-05.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/w4M9RrC/F-r-07.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/9GxVrmy/F-r-02.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/r5fXL1j/F-r-08.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/2W1nMmb/F-r-09.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/Vvmy7HD/Snapseed-nef-2.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/djZGrZr/Snapseed-nef-3.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <!-- Autumn Photos (categorized as Nature) -->
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/tXRyTdz/Brun-H-st-2.jpg" alt="Autumn Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/R4sT1g2/H-st-Krig-3.jpg" alt="Autumn Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/2ywnfZ7/H-st-Krig-5.jpg" alt="Autumn Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/M8J3sCM/Brun-H-st-1.jpg" alt="Autumn Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <!-- More Nature Photos -->
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/ZhJLgMw/F-r-12.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/jkMJJsY/F-r-11.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/0KMLBZj/F-r-13.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/ZX0QQj2/F-r-04.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/9NXSGkn/F-r-01.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/bBPs3KL/Snapseed-nef.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <div class="gallery-item loading" data-category="nature">
+                <img src="https://i.ibb.co/GRnckJG/Snapseed.jpg" alt="Nature Photography" loading="lazy">
+                <span class="category-label">Nature</span>
+            </div>
+            <!-- Architecture Photos -->
+            <div class="gallery-item loading" data-category="urban">
+                <img src="./images/Urban2.png" alt="Architecture Photography" loading="lazy">
+                <span class="category-label">Urban & Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="urban">
+                <img src="./images/Urban1.png" alt="Architecture Photography" loading="lazy">
+                <span class="category-label">Urban & Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/Kyrka3.png" alt="Architecture Photography" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/Kyrka4.png" alt="Architecture Photography" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/Kyrka5.png" alt="Architecture Photography" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/Kyrka1.png" alt="Church Architecture" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/Kyrka2.png" alt="Church Architecture" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+            <div class="gallery-item loading" data-category="architecture">
+                <img src="./images/House1.png" alt="House Architecture" loading="lazy">
+                <span class="category-label">Architecture</span>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-info loading">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>elliotwinblad@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sweden</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/elliotwinblad/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Enhanced Mobile-Friendly Instagram Bubble -->
+    <div class="instagram-bubble" tabindex="0" role="button" aria-label="View our Instagram accounts">
+        <i class="fab fa-instagram"></i>
+        <span>Follow Us!</span>
+    </div>
+    <!-- Enhanced Mobile-Friendly Instagram Modal -->
+    <div class="instagram-modal" role="dialog" aria-modal="true" aria-label="Instagram accounts">
+        <button class="modal-close" aria-label="Close Instagram modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="instagram-cards-container">
+            <!-- Personal Account Card -->
+            <div class="instagram-card">
+                <div class="instagram-profile-header">
+                    <div class="instagram-avatar">
+                        <img src="./images/Profile1.jpg" alt="Elliot Winblad Profile" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user" style="display: none;"></i>
+                    </div>
+                    <div class="instagram-profile-info">
+                        <h3>@elliotwinblad</h3>
+                        <div class="followers">
+                            <i class="fas fa-tree"></i>
+                            <span>Personal Photography</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-description">
+                    📸 Capturing life's beautiful moments<br>
+                    📸 Professional Photography<br>
+                    🇸🇪 Sweden<br>
+                </div>
+                <div class="instagram-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+10K</span>
+                        <span class="stat-label">Photos taken</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">27</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">26</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/elliotwinblad/" target="_blank" class="instagram-button">
+                    <i class="fab fa-instagram"></i>
+                    Follow @elliotwinblad
+                </a>
+                <div class="qr-section">
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">Scan to follow</p>
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.instagram.com/elliotwinblad/" alt="QR Code for Personal Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
     </button>
-    <div class="burger" onclick="toggleNav()" aria-label="Open navigation" role="button" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- Enhanced Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="Enlarged view">
+            <button class="lightbox-nav prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
-  </header>
-  <main>
-    <div class="construction-container">
-      <div class="construction-title">Under Construction</div>
-      <div style="margin-bottom:1.2rem;">
-  <!-- Construction crane Remix Icon -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <i class="ri-building-2-line" style="font-size:5.5rem;color:var(--primary);margin-bottom:0.5rem;"></i>
-  <div style="font-size:1.1rem;color:#888;margin-bottom:0.3rem;">Work in progress</div>
-      </div>
-      <div class="construction-desc">This page is currently being built.<br>Please check back soon!</div>
-      <div class="construction-actions">
-        <a href="index.html">Go Home</a>
-        <a href="sites.html">Our Sites</a>
-        <a href="apps.html">Our Apps</a>
-      </div>
-    </div>
-  </main>
-  <footer>
-    &copy; 2025 PortalsBase &mdash; Your hub for everything
-    <div class="footer-links">
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy & Policy</a>
-    </div>
-  </footer>
-  <script>
-    // Mobile nav toggle
-    function toggleNav() {
-      document.querySelector('nav').classList.toggle('open');
-    }
-    function closeNav() {
-      if (window.innerWidth < 801)
-        document.querySelector('nav').classList.remove('open');
-    }
-    window.addEventListener('resize', closeNav);
-    document.addEventListener('click', function(e){
-      if(window.innerWidth<801 && !e.target.closest('nav') && !e.target.closest('.burger')) {
-        closeNav();
-      }
-    });
-    // Dark mode logic
-    const dmToggle = document.getElementById('dm-toggle');
-    const dmIcon = document.getElementById('dm-icon');
-    function setTheme(mode) {
-      if (mode === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        dmIcon.innerHTML =
-          '<path d="M12 2a10 10 0 000 20c5.52 0 10-4.48 10-10a10 10 0 00-10-10z"/>';
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-        dmIcon.innerHTML =
-          '<circle cx="12" cy="12" r="5"/><g stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></g>';
-      }
-    }
-    function detectSystemTheme() {
-      if(window.localStorage.getItem('theme')) {
-        return window.localStorage.getItem('theme');
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    let currentTheme = detectSystemTheme();
-    setTheme(currentTheme);
-    dmToggle.addEventListener('click', function() {
-      currentTheme = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
-      setTheme(currentTheme);
-      window.localStorage.setItem('theme', currentTheme);
-    });
-    dmToggle.addEventListener('keydown', function(e){
-      if(e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        dmToggle.click();
-      }
-    });
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if(!window.localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    });
-  </script>
+    <!-- Footer -->
+    <footer class="footer">
+            <div class="footer-section">
+                <h3>About Elliot Winblad</h3>
+                <p>Capturing moments since 2020</p>
+                <p>Professional photography</p>
+                <p>Specializing in nature and architecture</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: elliotwinblad@gmail.com</p>
+                <p>Location: Sweden</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Photography Credits</h3>
+                <p>Photos by Elliot Winblad</p>
+                <p>Website by Elliot Winblad</p>
+            </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="https://www.instagram.com/elliotwinblad/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Elliot Winblad. All Rights Reserved.</p>
+            <p>V21.0</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
